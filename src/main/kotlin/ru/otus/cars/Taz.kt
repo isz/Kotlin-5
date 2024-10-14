@@ -36,4 +36,15 @@ object Taz: Car {
     override fun wheelToLeft(degrees: Int) {
         throw NotImplementedError("Руля нет")
     }
+
+    /**
+     * Используется для заправки машины
+     */
+    override val tankMouth: TankMouth
+        get() = throw IllegalAccessException("При попытке заправиться проскочила искра от рваной проводки и случилось нехорошее")
+
+    // Теперь мы узнаем что это за машина
+    override fun toString(): String {
+        return "Старый ржавый Таз"
+    }
 }
